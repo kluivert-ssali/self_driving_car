@@ -1,5 +1,5 @@
 class Road{
-    constructor(x,width,laneCount=4){
+    constructor(x,width,laneCount=3){
         this.x = x;
         this.width = width;
         this.laneCount =laneCount;
@@ -12,10 +12,7 @@ class Road{
         this.bottom=infinity;
     }
 
-    getLaneCenter(laneIndex) {
-        const laneWidth=this.width/this.laneCount;
-        return this.left+laneWidth/2+laneIndex*laneWidth;
-    }
+    getLaneCenter(laneIn)
 
     draw(ctx){
         ctx.lineWidth =5;
